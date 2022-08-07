@@ -1,6 +1,10 @@
 # Alterando cores com a lib colorama
 # OBS: usar init(autoreset=True) para cancelar a cor anterior
 
+
+# -> Codigo com problema, lembrar de terminar
+
+
 from random import randint
 from time import sleep
 from colorama import *
