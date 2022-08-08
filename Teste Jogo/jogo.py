@@ -12,6 +12,9 @@ pygame.display.set_caption('Jogo da bolinha com Python') # -> Para adicionar um 
 x = 400
 y = 300
 velocidade = 15 #pixel
+#img_fundo = pygame.image.load('estrada.png')
+#img_carro = pygame.image.load('carro1.png')
+
 
 # para manter a janela aberta até que o usuario a feche
 jaela_aberta = True
@@ -34,7 +37,10 @@ while jaela_aberta:
     if comandos[pygame.K_LEFT]:
         x -= velocidade
 
+    # Para colocar uma img ou cor de fundo
     janela.fill((000, 000, 000))
+    #janela.blit(img_fundo, (0, 0)) # -> (variavel, posição)
+
     # .draw para criar um circulo (paremetros: cor, posição, raio do circulo)
     pygame.draw.circle(janela, (0,200,210), (x, y), 50)
 
