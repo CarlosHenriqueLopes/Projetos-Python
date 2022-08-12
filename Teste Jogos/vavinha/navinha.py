@@ -13,7 +13,7 @@ janela = pygame.display.set_mode((x, y))
 # adicionar um nome a janela
 pygame.display.set_caption('Jogo da Navinha')
 
-nave = pygame.image.load('navinha.png').convert_alpha()
+nave = pygame.image.load('imagens/navinha.png').convert_alpha()
 nave = pygame.transform.scale(nave, (x, y)) 
 
 rodando = True
