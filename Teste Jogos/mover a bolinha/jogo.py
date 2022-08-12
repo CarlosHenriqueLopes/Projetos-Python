@@ -1,6 +1,3 @@
-
-
-from cgitb import grey
 import pygame
 pygame.init()
 

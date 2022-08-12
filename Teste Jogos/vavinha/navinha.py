@@ -1,4 +1,3 @@
-from turtle import Screen
 import pygame
 
 #1. iniciar o pygame
