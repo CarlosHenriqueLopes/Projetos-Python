@@ -1,4 +1,4 @@
-# Meta caracteres quantificadores: . ^ * + ? { } [ ] \ | ( )
+# Meta caracteres quantificadores: * + ? { }
 
 # * -> 0 (precisa existir) ou ilimitadas repetições
 # + -> 1 ou ilimitadas repetições
