@@ -2,6 +2,7 @@
 O programa vai ler idade e sexo de varias pessoas e dizer:
 Quantas PESSOAS TEM MAIS DE 18 ANOS, quantidade de HOMENS CADASTRADOS e MULHERES COM MENOS DE 20 ANOS
 """
+
 from time import sleep
 
 cont = homens = mulheres = 0
