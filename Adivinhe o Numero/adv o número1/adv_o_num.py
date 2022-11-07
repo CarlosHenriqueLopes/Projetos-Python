@@ -1,9 +1,11 @@
+"""
+Depois de 5 tentativas o programa irá dizer se o número é par ou impar e perguntar se o usuário quer uma dica,
+a dica irá dizer onde o número pode estar em um grupo de números, depois de 10 tentativas, ele irá dizer denovo se é par ou impar,
+o falar o conjunto de números onde o número pode estar. (os valores das tentativas e a quantidade de números sorteados, podem ser alterados)
+"""
+
 # Alterando cores com a lib colorama
 # OBS: usar init(autoreset=True) para cancelar a cor anterior
-
-
-# -> Codigo com problema, lembrar de terminar
-
 
 from random import randint
 from time import sleep
@@ -13,6 +15,7 @@ init(autoreset=True)
 numero = randint(0, 100)
 cont = 1
 
+#Mostrar o valor sorteado
 print(numero) #Lembrete: Para testes (remover esse comando no final)
 
 print(Fore.LIGHTGREEN_EX + Style.BRIGHT + 'Adivinhe um o número escolhido pela maquina, entre 0 e 100')
@@ -35,28 +38,28 @@ while numero != per:
         sleep(0.5)
         dica = str(input(Fore.BLUE + 'Gostaria de mais dicas? ')).upper().strip()[0]
         sleep(0.5)
-        if dica == 'S':
-            if numero <= 30:
-                print(Fore.BLUE + Style.BRIGHT + 'Está ente 0 a 30')
-            elif 30 > numero <= 60:
-                print(Fore.BLUE + Style.BRIGHT + 'Está ente 30 a 60')
-            else:
-                60 > numero <= 100
-                print(Fore.BLUE + Style.BRIGHT + 'Está ente 60 a 100')
 
-    elif cont == 15:
+        if 'S' in dica:
+            if numero <= 30:
+                print(Fore.BLUE + Style.BRIGHT + '\nEstá ente 0 a 30')
+            elif 30 < numero <= 60:
+                print(Fore.BLUE + Style.BRIGHT + '\nEstá ente 30 a 60')
+            elif 60 < numero <= 100:
+                print(Fore.BLUE + Style.BRIGHT + '\nEstá ente 60 a 100')
+
+    if cont == 10:
         if numero <= 30 and numero % 2 == 0:
             print(Fore.BLUE + Style.BRIGHT + 'É um número PAR entre 0 a 30')
-        elif 30 > numero <= 60 and numero % 2 == 0:
+        elif 30 < numero <= 60 and numero % 2 == 0:
             print(Fore.BLUE + Style.BRIGHT + 'É um número PAR entre 30 a 60')
-        elif 60 > numero <= 100 and numero % 2 == 0:
+        elif 60 < numero <= 100 and numero % 2 == 0:
             print(Fore.BLUE + Style.BRIGHT + 'É um número PAR entre 60 a 100')
 
         elif numero <= 30 and numero % 2 == 1:
             print(Fore.BLUE + Style.BRIGHT + 'É um número IMPAR entre 0 a 30')
-        elif 30 > numero <= 60 and numero % 2 == 1:
+        elif 30 < numero <= 60 and numero % 2 == 1:
             print(Fore.BLUE + Style.BRIGHT + 'É um número IMPAR entre 30 a 60')
-        elif 60 > numero <= 100 and numero % 2 == 1:
+        elif 60 < numero <= 100 and numero % 2 == 1:
             print(Fore.BLUE + Style.BRIGHT + 'É um número IMPAR entre 60 a 100')
 
     if per > numero:
