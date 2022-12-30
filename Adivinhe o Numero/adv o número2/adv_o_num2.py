@@ -16,9 +16,10 @@ def subtt(x):
     
 
 cont = tentativas = 1
-titulo(' ADIVINHE O NUMERO')
+titulo(' ADIVINHE O NUMERO') #def titulo
 
-subtt(' Escolha um numero entre 1 a 100')
+subtt(' Escolha um numero entre 1 a 100') #def subtt
+
 while True:
     print(numero)
     pergunta = int(input(' ESCOLHA UM NUMERO: '))
