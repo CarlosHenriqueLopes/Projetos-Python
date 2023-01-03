@@ -9,6 +9,8 @@ jobs = {
 """
 # Documentação https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
+# Fazendo o Scrapping
+
 import requests
 from bs4 import BeautifulSoup
 
