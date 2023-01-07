@@ -33,8 +33,6 @@ cards = soup.find_all("article", class_="Card__CardWrapper-sc-om5cci-0 hqncyC")
 #print(cards) # -> print de verificação
 
 
-#1º p/facilitar montar um looping for antes de passar para o dicionario
-
 for c in cards:
   print(c.find_all("a", {"title" : "Vagas de Desenvolvedor Python Jedi"}).string)
   break
@@ -46,10 +44,7 @@ for c in cards:
   print("------------------")"""
 
 
-'''# Descrição do trexo
-# vai criar um dicionario e adicionar em uma lista
-jobs = list()
-
+'''
 for c in cards:
   dict = {
     "title" : c.find("a").get("title"),
