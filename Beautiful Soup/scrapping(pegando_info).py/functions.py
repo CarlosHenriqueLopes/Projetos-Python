@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-site = "https://www.vagas.com.br/vagas-de-python?"
+# -> site usado https://www.vagas.com.br
 
 def scrapping(job):
 
