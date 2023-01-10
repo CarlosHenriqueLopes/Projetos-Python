@@ -11,7 +11,7 @@ import math
 
 url_base = 'https://br.indeed.com/empregos?'
 
-
+# keyword -> colocar o job
 def search_keyword(keyword):
   #url + request
   r_indeed = requests.get(f'{url_base}q={keyword}&limit=50&start=0')
