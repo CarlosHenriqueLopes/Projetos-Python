@@ -20,7 +20,7 @@ site = "https://www.catho.com.br/vagas/?pais_id=31&q=python"
 
 
 
-# fazer a contagem de paginas na def search_keyword()
+# fazer a contagem de paginas na def search_keyword()  (terminar)
 
 def search_keyword(keyword):
   r = requests.get(f"https://www.catho.com.br/vagas/python/?q={keyword}&page=2")
