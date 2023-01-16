@@ -1,5 +1,5 @@
 """
-Vai fazer um scrapping e contar a quantidade de paginas por jobs procurados
+Vai fazer um scrapping e contar a quantidade de paginas por jobs procurados, so site indeed
 """
 
 # OBS Só para estudo

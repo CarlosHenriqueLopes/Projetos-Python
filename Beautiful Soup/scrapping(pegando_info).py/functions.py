@@ -1,3 +1,8 @@
+'''
+Vai mostrar as vagas da primeira pagina, com as descrições do for
+'''
+
+
 import requests
 from bs4 import BeautifulSoup
 
