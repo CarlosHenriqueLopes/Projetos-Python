@@ -39,6 +39,8 @@ def search_keyword(keyword):
 
 
 #----------------------------------------------------------------------
+# pegando info das vagas
+
 def scrapping(url):
   
   #fazendo a requisição, pegando arqv texto
