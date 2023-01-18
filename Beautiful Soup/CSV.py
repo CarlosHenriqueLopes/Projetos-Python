@@ -36,7 +36,9 @@ for c in cards:
 file = open("jobs.csv", "w")
 
 write = csv.writer(file)
+# adicionando manualmente os titulos para a tabela (sao as keys do dict da lista)
 write.writerow(["title", "company", "nivelVaga", "location", "how_old", "link"])
 
+# adicionando os valores da lista
 for c in jobs:
   write.writerow(list(c.values()))
