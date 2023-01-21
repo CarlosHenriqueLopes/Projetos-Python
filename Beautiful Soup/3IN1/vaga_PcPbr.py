@@ -52,7 +52,10 @@ def search_keyword(keywords):
     
       total_jobs.append(dict)
   
-    #print(jobs)
+  print()
+  print(len(total_jobs))
+  print(urls)
+  print()
 
 
   #----------------------------------------------------------
