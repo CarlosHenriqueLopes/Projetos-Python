@@ -63,9 +63,10 @@ def search_keyword(keywords):
   file = open("total_jobs.csv", "w")
 
   escrever = csv.writer(file)
+  # adicionando as keys manualmente
   escrever.writerow(["title", "company", "nivelVaga", "location", "how_old", "link"])
-  #print(escrever)
 
   for c in total_jobs:
     print("escrevendo url")
+    # usando .values() para adicionar os valores automaticamente
     escrever.writerow(c.values())
