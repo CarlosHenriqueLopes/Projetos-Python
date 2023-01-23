@@ -4,7 +4,6 @@ from wisen import get_jobs
 
 # nome da aplicação
 app = Flask("CarlosHenrique")
-#(flask run para executar de um computador)
 
 # rota (/ - index - raiz, (pag inicial))
 @app.route('/')
@@ -44,4 +43,5 @@ def result():
     
   return render_template("result.html", RefNo_HTML=pegando_resultados, RefNo_HTML2=p_h1h2)
 
-app.run(host="0.0.0.0")
+#(flask run para executar de um computador)
+app.run(host="0.0.0.0") #-> para o replit
