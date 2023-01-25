@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Maratona News</title>
+  <!-- AQUI IMPORTO UM ESTILO CSS -->
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>Titulo da Materia</h1>
+    <div>
+      Pontos, autor, url
+    </div>
+  </header>
+  
+  <main>
+
+    {% for cmd in res_html.children %}
+    <div>
+      <h2>Comment</h2>
+      <h3>{{cmd.author}}</h3>
+      <p>{{cmd.text | safe}}</p> <!--safe é uma função do flask para remover mascações-->
+      
+      {% for subs in cmd.children %} <!--obs, não foi pego todos os subs comentarios-->
+        <p><strong>Subcomment</strong></p>
+        <h3>{{subs.author}}</h3>
+        <p>{{subs.text | safe}}</p>
+      {% endfor %}
+    </div>
+    <hr>
+    {% endfor %}
+
+
+    
+  
+   
+  </main>
+
+</body>
+</html>

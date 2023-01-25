@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+	<title>Maratona News</title>
+  <!-- AQUI IMPORTO UM ESTILO CSS -->
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  
+  <style>
+    body{
+        background-color: rgb(122, 121, 121);
+    }
+    
+    span{
+      color: black
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Titulo do Site</h1>
+    <div><!--mostrando os btns-->
+      {% if order == "news" %}
+      <a href="/?var=popular">Popular</a>
+      <a href="/?var=news"><strong>News</strong></a>
+      {% else %}
+       <a href="/?var=popular"><strong>Popular</strong></a>
+      <a href="/?var=news">News</a>
+      {% endif %}
+    </div>
+  </header>
+
+  
+  <main>
+    <!--cada valor do cmd for representa um valor depois depois da / (barra) ou um link-->
+    {% for cmd in res_html %}
+    <div>
+      
+      <div>
+        <a href="{{cmd.objectID}}" target="_blank"> <h3> <span>Title:</span> {{cmd.title}}</h3> </a>
+        <a href="{{cmd.url}}" target="_blank"> <h3> <span>Link:</span> {{cmd.url}}</h3> </a>
+      </div>
+      
+      <div>
+        <p>por: {{cmd.author}} | {{cmd.points}} points | {{cmd.num_comments}} comentários</p>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </main>
+</body>
+</html>

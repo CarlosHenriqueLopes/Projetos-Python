@@ -3,6 +3,7 @@ Link: https://news.ycombinator.com/
 Hacker News é um site de notícias sociais com foco em ciências da
 computação e empreendedorismo.
 
+DESCRIÇÃO:
 O programa vai pegar umas APIs dele e criar uma aplicação web para listar
 notícias do site.
 """
