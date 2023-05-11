@@ -1,0 +1,15 @@
+## Rota user só com uma variável, para chamar a key do dict do banco
+
+@app.route("/user/<variavel>")
+def profile(variavel):
+    user = users.get(variavel) #dando um get no bd
+
+    #se user for verdadeiro, retorna um html com o bd da variável
+    if user:
+        return f"""
+            <h2>{user['name']}</h2>
+            Telefone: {user['tel']} <br><br>
+            <a href='/'>Voltar para home</a>
+            """
+    else:
+        return abort(404, "Este nome não está no banco de dados")
