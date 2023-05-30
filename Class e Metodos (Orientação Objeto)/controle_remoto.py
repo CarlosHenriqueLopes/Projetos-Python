@@ -20,6 +20,8 @@ class controle():
         if m != self.cor:
             self.cor = m
             print(self.cor)
+        else:
+            print(f"O controle já tem a cor {self.cor}")
 
 
 # Atribuindo valores do init
@@ -36,4 +38,5 @@ controle_tv.trocar_canal('>')
 controle_tv.trocar_canal('<')
 
 #Trocando a cor do controle
+controle_tv.mudar_cor('Branco')
 controle_tv.mudar_cor('Branco')
