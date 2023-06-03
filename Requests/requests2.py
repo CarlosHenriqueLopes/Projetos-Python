@@ -1,7 +1,7 @@
 """
 Web Scraper:
-vai varrer varios setes e depois organizar os dados
-(coletar um grande número de informações de sites)
+vai varrer varios sites e depois organizar os dados
+mostrando a condição pelo status code
 """
 
 import requests
